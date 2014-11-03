@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="EnumGenerator"
+            id="EnumGenerator">
+      </category>
+      <wizard
+            name="枚举创建向导"
+            icon="icons/sample.gif"
+            category="EnumGenerator"
+            class="com.cownew.enumgenerator.wizards.EnumGeneratorNewWizard"
+            id="com.cownew.enumgenerator.wizards.EnumGeneratorNewWizard">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eclipse.ui.category.file"
+            id="enumgenerator.command1"
+            name="name"
+            returnTypeId="org.eclipse.ui.ide.resourcePath">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="enumgenerator.command1"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="enumgenerator.key1"
+            sequence="CTRL+P">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="enumgenerator.category1"
+            name="kongxm_category">
+      </category>
+      <view
+            category="enumgenerator.category1"
+            class="enumgenerator.ViewPart1"
+            fastViewWidthRatio="0.2"
+            icon="icons/sample.gif"
+            id="enumgenerator.view1"
+            name="kongxm_view"
+            restorable="true">
+      </view>
+   </extension>
+
+
+</plugin>
